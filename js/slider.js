@@ -1,0 +1,23 @@
+$(document).ready(function(){
+    $(".customer-logos").slick({
+        slidesToShow:6,
+        slidesToScroll:1,
+        autoplay:!0,
+        autoplaySpeed:1500,
+        arrows:!1,
+        dots:!1,
+        pauseOnHover:!1,
+        responsive:[{
+            breakpoint:769,
+            settings:{
+                slidesToShow:3
+            }},
+            {breakpoint:520,
+                settings:{slidesToShow:2}}]})}),
+                $("#myCarousel").carousel({interval:1e4}),
+                $(".carousel .item").each(function(){var e=$(this).next();
+                    e.length||(e=$(this).siblings(":first")),
+                    e.children(":first-child").clone().appendTo($(this)),
+                    e.next().length>0?e.next().children(":first-child").clone().appendTo
+                    ($(this)):$(this).siblings(":first").children(":first-child").clone()
+                    .appendTo($(this))});
